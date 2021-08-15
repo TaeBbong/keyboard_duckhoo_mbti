@@ -12,7 +12,7 @@ function App() {
 const Container = styled.div`
   width: 100%;
   height: 100vh;
-  bakcground-color: #bdc3c7;
+  background-color: #bdc3c7;
 `;
 
 const Button = styled.button`
