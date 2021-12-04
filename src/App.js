@@ -1,33 +1,31 @@
-import styled from "styled-components";
+import Button from "./components/button";
+import Container from "./components/container";
 
 function App() {
   return (
-    <Container>
-      <Button />
-      <Button danger />
+    <BackgroundContainer color="grey" height="100vh">
+      <CardContainer color="white" width="30%" height="50vh">
+        <Button />
+        <Button danger />
+      </CardContainer>
+    </BackgroundContainer>
+  );
+}
+
+function BackgroundContainer({ children, width, height, color }) {
+  return (
+    <Container color={color} width={width} height={height}>
+      {children}
     </Container>
   );
 }
 
-const Container = styled.div`
-  width: 100%;
-  height: 100vh;
-  background-color: #bdc3c7;
-`;
-
-const Button = styled.button`
-  border-radius: 50px;
-  padding: 5px;
-  min-width: 120px;
-  color: white;
-  font-weight: 600;
-  -webkit-appearance: none;
-  cursor: pointer;
-  background-color: ${(props) => (props.danger ? "#e74c37" : "2ecc71")};
-  &:active,
-  &:foucus {
-    outline: none;
-  }
-`;
+function CardContainer({ children, width, height, color }) {
+  return (
+    <Container color={color} width={width} height={height}>
+      {children}
+    </Container>
+  );
+}
 
 export default App;
