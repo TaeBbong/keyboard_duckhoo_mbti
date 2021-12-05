@@ -3,7 +3,7 @@ import Container from "./components/container";
 
 function App() {
   return (
-    <BackgroundContainer color="grey" height="100vh">
+    <BackgroundContainer color="lightblue" height="100vh">
       <CardContainer color="white" width="30%" height="50vh">
         <Button />
         <Button danger />
